@@ -1,0 +1,12 @@
+README			An introduction to this pithy module
+MANIFEST		You're soaking in it
+Makefile.PL		Script to setup Makefile
+lib/Maptastic.pm	The meat!
+t/01-mapcar.t		Test script for basic functions
+t/02-iterators.t	Test script for iterative functions
+debian/changelog	Debian build files
+debian/control
+debian/copyright
+debian/README.Debian
+debian/rules
+META.yml                                 Module meta-data (added by MakeMaker)

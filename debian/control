@@ -1,0 +1,16 @@
+Source: libmaptastic-perl
+Section: interpreters
+Priority: optional
+Build-Depends: debhelper (>= 3.0.5), perl (>= 5.6.0-17)
+Maintainer: Sam Vilain <sam@vilain.net>
+Standards-Version: 3.5.1
+
+Package: libmaptastic-perl
+Architecture: all
+Depends: ${perl:Depends}
+Description:  splice a list of lists, and a version of map for hashes
+ This module exports three new types of map, for dealing with lists of
+ lists, and mapping over hashes.
+ .
+ It also provides iterative versions of map, grep and the new map
+ types.	
