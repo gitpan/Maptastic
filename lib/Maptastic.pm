@@ -114,7 +114,7 @@ use Scalar::Util qw(reftype blessed);
 use vars qw( $VERSION @EXPORT @ISA %EXPORT_TAGS);
 
 BEGIN {
-    $VERSION= "0.99";
+    $VERSION= "1.00";
     @EXPORT= qw( mapcar mapcaru map_each map_shift map_for
 		 map_foreach filter
 
@@ -219,7 +219,7 @@ sub mapcar(&@)
     for(  my $i= 0;  !$all_done;  $i++  ) {
 	my $c = -1;
 	$all_done = 1;
-        push @ret, &$sub( map {
+	my @next = (map {
 	    $c++;
 	    ( $which[$c]
 	      ? ( defined($x = $which[$c]->())
@@ -232,6 +232,8 @@ sub mapcar(&@)
 		  : ()
 		) )
 	} @_);
+
+	push @ret, &$sub(@next) if @next;
     }
     return wantarray ? @ret : \@ret;
 }

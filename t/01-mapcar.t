@@ -31,7 +31,8 @@ is_deeply(\@mixed, [ [1,     "Mary", "A"],
 		     [2,     "Jane", "B"],
 		     [3,             "C"],
 		     [               "D"],
-		     [               "E"] ],
+		     [               "E"],
+		   ],
 	  "map_for");
 
 my %hashed = map_each { ( $_[1] > 4 ? @_ : () ) } \%d;
