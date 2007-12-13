@@ -114,7 +114,7 @@ use Scalar::Util qw(reftype blessed);
 use vars qw( $VERSION @EXPORT @ISA %EXPORT_TAGS);
 
 BEGIN {
-    $VERSION= "1.00";
+    $VERSION= "1.01";
     @EXPORT= qw( mapcar mapcaru map_each map_shift map_for
 		 map_foreach filter
 
@@ -298,7 +298,7 @@ sub map_each(&@)
     return @results;
 }
 
-=item imapcar ...
+=item imapcar [TODO] ...
 
 =item imap_for ...
 
@@ -540,7 +540,7 @@ import tags :perly (or :perl or :perlish);
 
 =head1 SEE ALSO
 
-L<perlfunc/map>, L<perldata>, L<Object::Iterate>
+L<perlfunc/map>, L<perldata>, L<Object::Iterate>, L<Maptastic::DBI>
 
 =head1 AUTHOR
 
@@ -548,5 +548,7 @@ Original implementation of mapcar by tye.  See
 L<http://www.perlmonks.org/index.pl?node_id=22609>
 
 Packaged for CPAN by The Map Junky <samv@cpan.org>
+
+This module was somewhat inspired by an MJD talk at YAPC::Europe.
 
 =cut
